@@ -14,10 +14,14 @@ import com.google.android.material.snackbar.Snackbar
 import java.text.DecimalFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
+    private var tts:TextToSpeech? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tts = TextToSpeech(this, this)
 
         //botao de falar
         val fab_sound: FloatingActionButton = findViewById<FloatingActionButton>(R.id.sound_fab)
@@ -83,7 +87,9 @@ class MainActivity : AppCompatActivity(){
 
         //botoes
         fab_sound.setOnClickListener {
+            val falar = ("Deu " + result.text.toString() + "reais para cada!")
 
+            tts!!.speak(falar, TextToSpeech.QUEUE_FLUSH, null,"")
         }
 
         fab_share.setOnClickListener {
@@ -102,6 +108,31 @@ class MainActivity : AppCompatActivity(){
         }
 
 
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            // set US English as language for tts
+            val result = tts!!.setLanguage(Locale.forLanguageTag("pt-BR"))
+
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS","The Language specified is not supported!")
+            } else {
+                Log.v("TTS","Deu certo!")
+            }
+
+        } else {
+            Log.e("TTS", "Initilization Failed!")
+        }
+    }
+
+    public override fun onDestroy() {
+        // Shutdown TTS
+        if (tts != null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+        super.onDestroy()
     }
 }
 
