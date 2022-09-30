@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
         val fab_sound: FloatingActionButton = findViewById<FloatingActionButton>(R.id.sound_fab)
         //botao de compartilhar
         val fab_share: FloatingActionButton = findViewById<FloatingActionButton>(R.id.share_fab)
-        //botao de informacao
-        val fab_info: FloatingActionButton = findViewById<FloatingActionButton>(R.id.info_fab)
 
         //campo resultado
         var result: TextView = findViewById(R.id.result)
@@ -101,10 +99,6 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
 
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
-        }
-
-        fab_info.setOnClickListener {
-            //todo info
         }
 
 
