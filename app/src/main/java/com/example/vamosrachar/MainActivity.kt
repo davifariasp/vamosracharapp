@@ -39,11 +39,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
         //alteracoes
         f_people.addTextChangedListener(object: TextWatcher{
             override fun afterTextChanged(s: Editable?) {
-                val c = (f_cash.text).toString()
-                val p = (f_people.text).toString()
+                val c = f_cash.text.toString()
+                val p = f_people.text.toString()
 
                 if(c.isEmpty() || p.isEmpty()){
                     Log.e("pdm", "Valor em branco")
+                    result.setText("0,00")
+                } else if ((c.toInt()).equals(0) || (p.toInt()).equals(0) ) {
+                    Log.e("pdm", "Divisão por 0")
+                    result.setText("0,00")
                 } else {
                     Log.v("pdm", "Você alterou o valor")
                     val valor = (c.toFloat() / p.toFloat())
@@ -61,11 +65,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
 
         f_cash.addTextChangedListener(object: TextWatcher{
             override fun afterTextChanged(s: Editable?) {
-                val c = (f_cash.text).toString()
-                val p = (f_people.text).toString()
+                val c = f_cash.text.toString()
+                val p = f_people.text.toString()
 
                 if(c.isEmpty() || p.isEmpty()){
                     Log.e("pdm", "Valor em branco")
+                    result.setText("0,00")
+                } else if ((c.toInt()).equals(0) || (p.toInt()).equals(0) ) {
+                    Log.e("pdm", "Divisão por 0")
+                    result.setText("0,00")
                 } else {
                     Log.v("pdm", "Você alterou o valor")
                     val valor = (c.toFloat() / p.toFloat())
