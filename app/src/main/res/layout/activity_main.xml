@@ -56,8 +56,11 @@
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
+            android:hint="Valor da conta"
             android:inputType="number"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="EditableContentDescCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,8 +89,11 @@
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
+            android:hint="Quantidade de pessoas"
             android:inputType="number"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="SpeakableTextPresentCheck,EditableContentDescCheck" />
 
     </LinearLayout>
 
@@ -146,9 +152,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:layout_weight="1"
-                android:backgroundTint="#7D36FF"
+                android:backgroundTint="#FF9800"
                 android:baselineAlignBottom="false"
                 android:clickable="true"
+                android:contentDescription="Leitura do resultado"
                 app:borderWidth="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/share_fab"
@@ -167,8 +174,9 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="70dp"
                 android:layout_weight="1"
-                android:backgroundTint="#7D36FF"
+                android:backgroundTint="#FF9800"
                 android:clickable="true"
+                android:contentDescription="Compartilhar resultado"
                 app:borderWidth="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
