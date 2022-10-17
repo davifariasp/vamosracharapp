@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lets crack!</string>
+    <string name="title">Lets crack!</string>
+    <string name="cash_text">Restaurant bill</string>
+    <string name="people_text">Amount of people</string>
+</resources>

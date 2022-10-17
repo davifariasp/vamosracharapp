@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Vamos Rachar</string>
+    <string name="title" >Vamos Rachar!</string>
+    <string name="cash_text" >valor da conta</string>
+    <string name="people_text" >qnt. de pessoas</string>
 </resources>

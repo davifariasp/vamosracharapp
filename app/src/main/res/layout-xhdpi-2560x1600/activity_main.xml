@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
-    tools:context=".MainActivity">
+    android:background="@color/bg">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="237dp"
-        android:layout_height="140dp"
+        android:layout_width="560dp"
+        android:layout_height="336dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal"
@@ -21,20 +19,20 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="146dp"
+            android:layout_width="456dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/title"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="60sp"
+            android:textSize="130dp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="313dp"
-        android:layout_height="89dp"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -51,6 +49,7 @@
 
         <EditText
             android:id="@+id/cash_field"
+
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -60,13 +59,13 @@
             android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            tools:ignore="EditableContentDescCheck" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="313dp"
-        android:layout_height="89dp"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal"
@@ -93,14 +92,14 @@
             android:inputType="number"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            tools:ignore="SpeakableTextPresentCheck,EditableContentDescCheck" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="163dp"
-        android:layout_height="37dp"
+        android:layout_width="312dp"
+        android:layout_height="65dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +114,7 @@
             android:layout_weight="1"
             android:text="R$"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -126,7 +125,7 @@
             android:text="0,00"
             android:textAlignment="viewEnd"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -191,4 +190,15 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Layout Nexus 10"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
